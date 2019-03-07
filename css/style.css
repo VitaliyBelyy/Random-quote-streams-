@@ -1,0 +1,178 @@
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+/*resetCSS*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0;
+}
+fieldset, img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol, ul {
+  list-style: none;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+}
+* {
+  outline: none;
+}
+html {
+  font-size: $fs-base;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: black;
+  text-decoration: underline;
+  @include on-state {
+    text-decoration: none;
+  }
+}
+@include padding(left, none);
+@include padding(right, none);
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.full-width {
+  width: 100%;
+}
+
+input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;} 
+input:-moz-placeholder      {text-overflow:ellipsis;} 
+input:-ms-input-placeholder {text-overflow:ellipsis;}
+
+/*main styles */  
+
+body {
+	height: 100vh;
+  background-color: #1d9c72;
+  font-family: 'Lato', sans-serif;
+  padding: 60px 20px 0;
+}
+body header {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, .6);
+}
+body .container {
+  max-width: 600px;
+  padding: 30px 40px;
+  margin: 100px auto 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.3);
+}
+.container .quote-wrapper {
+  display: flex;
+  justify-content: center;
+  color: #1d9c72;
+}
+.container .quote-wrapper i {
+  font-size: 28px;
+  margin-top: 6px;
+  opacity: .5;
+}
+.container .quote-wrapper i:nth-of-type(1) {
+  margin-right: 10px;
+}
+.container .quote-wrapper i:nth-of-type(2) {
+  margin-left: 10px;
+}
+.container .quote {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, .1);
+}
+.container .author {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1d9c72;
+  text-align: right;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, .1);
+  margin-top: 20px;
+}
+.container .buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .buttons .twitter {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(29, 156, 114, .8);
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  padding-top: 5px;
+  border-radius: 4px;
+}
+.container .buttons .new {
+  border: none;
+  background-color: rgba(29, 156, 114, .8);
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  padding: 0 10px;
+  border-radius: 4px;
+  text-shadow: 1px 0px 1px rgba(150, 150, 150, .6);
+  cursor: pointer;
+}
+.container .buttons .twitter:hover, .container .buttons .new:hover {
+  background-color: rgba(29, 156, 114, 1);
+  transition: .3s ease-out;
+}
